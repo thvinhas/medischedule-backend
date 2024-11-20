@@ -24,7 +24,6 @@ class InsuranceController extends Controller
      */
     public function store(StoreInsuranceRequest $request)
     {
-//        return "hue";
         $insurance = Insurance::create($request->validated());
         return new InsuranceResource($insurance);
     }
