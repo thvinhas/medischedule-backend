@@ -2,6 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Http\Controllers\Api\SpecialityController;
+use App\Models\Hospital;
+use App\Models\Insurance;
+use App\Models\Speciality;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -19,5 +23,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        Hospital::factory(5)->create();
+        Speciality::factory(5)->create();
+        Insurance::factory(5)->hasPatients()->create();
+
     }
 }
