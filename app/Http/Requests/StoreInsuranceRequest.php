@@ -22,7 +22,7 @@ class StoreInsuranceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required','max:55']
+            'name' => ['required','string','max:55']
         ];
     }
 }
